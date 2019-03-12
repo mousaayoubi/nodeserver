@@ -11,7 +11,7 @@ fs.readFile("./index.html", function(error, data) {
   }
   var server = http.createServer(function(request, response) {
     response.statusCode = 200;
-    response.getHeader("Content-Type", "text/html");
+    response.getHeader("Content-Type", "text/plain");
     response.write(data);
     response.end();
   });
